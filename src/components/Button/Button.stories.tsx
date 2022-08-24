@@ -14,7 +14,7 @@ Default.args = {
     padding: "20px",
     width: "20em",
     margin: "10px",
-    color: "white",
+    color: "black",
     fontSize: "19px",
     cursor: "pointer",
     border: "2px solid #fecd43",

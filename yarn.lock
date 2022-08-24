@@ -1940,7 +1940,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-actions@6.5.10", "@storybook/addon-actions@^6.5.9":
+"@storybook/addon-actions@6.5.10", "@storybook/addon-actions@^6.5.10":
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.5.10.tgz#83ec807a899e0412cf98037647f256c45cc32bf5"
   integrity sha512-vpCnEu81fmtYzOf0QsRYoDuf9wXgVVl2VysE1dWRebRhIUDU0JurrthTnw322e38D4FzaoNGqZE7wnBYBohzZA==
@@ -1983,6 +1983,13 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
+
+"@storybook/addon-console@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-console/-/addon-console-1.2.3.tgz#f6c88a8f54fe00c8de9b77720eaef2bc1daa3af1"
+  integrity sha512-w5uCUwECA28fdZWoa+A4e/RS9XzBStdd3TwwmpSM5m4fjURJI7Qr+uVq30UeRdgZRH1K7CdWzYUE6RxWXMdVyw==
+  dependencies:
+    global "^4.3.2"
 
 "@storybook/addon-controls@6.5.10":
   version "6.5.10"
@@ -2096,7 +2103,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-measure@6.5.10":
+"@storybook/addon-measure@6.5.10", "@storybook/addon-measure@^6.5.10":
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.5.10.tgz#afac72a15d927f9f2119e2218017d757a8c8c6a4"
   integrity sha512-ss7L1H5K5hXygDIoVwj+QyVXbve5V67x7CofLiLCgQYuJzfO16+sPGjiTGWMpTb4ijox2uKWnTkpilt5bCjXgw==
@@ -2139,7 +2146,7 @@
     core-js "^3.8.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addon-viewport@6.5.10":
+"@storybook/addon-viewport@6.5.10", "@storybook/addon-viewport@^6.5.10":
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.5.10.tgz#4c6151d7e8177b07df8dcb4c61e842dac949215b"
   integrity sha512-RFMd+4kZljyuJjR9OJ2bFXHrSG7VTi5FDZYWEU+4W1sBxzC+JhnVnUP+HJH3gUxEFIRQC5neRzwWRE9RUUoALQ==
@@ -6951,7 +6958,7 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
+fast-deep-equal@^3.0.0, fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
@@ -7498,7 +7505,7 @@ global-prefix@^3.0.0:
     kind-of "^6.0.2"
     which "^1.3.1"
 
-global@^4.4.0:
+global@^4.3.2, global@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
   integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
@@ -12968,6 +12975,14 @@ store2@^2.12.0:
   version "2.14.2"
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
+
+storybook-dark-mode@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/storybook-dark-mode/-/storybook-dark-mode-1.1.0.tgz#4aca307a9c09f1b95743da2db6b07c8eea99ed24"
+  integrity sha512-F+hG02zYGBzxGTUonA1XDV/CtMYm3OjF38Tu1CIUN+w+8hwUrwLcOtgtLLw6VjSrZdJ/ECK+tjXdKTV4oZqAXw==
+  dependencies:
+    fast-deep-equal "^3.0.0"
+    memoizerific "^1.11.3"
 
 stream-browserify@^2.0.1:
   version "2.0.2"
