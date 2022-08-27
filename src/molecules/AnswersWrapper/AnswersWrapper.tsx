@@ -1,4 +1,11 @@
+import styled from "styled-components";
 import { AnswerText } from "../../atoms";
+
+const Title = styled.div`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
 
 export type QuestionGridType =
   | "auto"
@@ -19,10 +26,10 @@ export function AnswersWrapper({
   type = "auto",
 }: AnswersWrapperProps): JSX.Element {
   return (
-    <div>
+    <Title>
       {answers.map((answer) => (
         <AnswerText key={answer} answer={answer} />
       ))}
-    </div>
+    </Title>
   );
 }

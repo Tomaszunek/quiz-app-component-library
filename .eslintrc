@@ -12,7 +12,7 @@
     "react-app", 
     "react-app/jest"
   ],
-  "plugins": ["react", "jest", "import", "@typescript-eslint"],
+  "plugins": ["react", "jest", "import", "@typescript-eslint", "eslint-plugin-better-styled-components"],
   "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
