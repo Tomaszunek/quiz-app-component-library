@@ -5,7 +5,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "build:lib": "rollup -c"
+    "build:lib": "rollup -c",
+    "plop": "plop --plotfile plotfile.ts"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -47,8 +48,9 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "babel-plugin-named-exports-order": "^0.0.2",
-    "prop-types": "^15.8.1",
+    "plop": "^3.1.1",
     "postcss": "^8.4.16",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

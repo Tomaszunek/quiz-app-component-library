@@ -30,10 +30,64 @@ var __assign = function() {
     return __assign.apply(this, arguments);
 };
 
-var Button = function (_a) {
-    var label = _a.label, style = _a.style, onClick = _a.onClick;
-    return (jsxRuntime.jsx("button", __assign({ style: style, onClick: onClick }, { children: label })));
+var AnswerText = function (_a) {
+    var answer = _a.answer;
+    return (jsxRuntime.jsx("div", __assign({ className: "border p-4 shadow transition w-full delay-75 hover:bg-slate-200" }, { children: answer })));
 };
 
-exports.Button = Button;
+var QuestionText = function (_a) {
+    var questionText = _a.questionText;
+    return jsxRuntime.jsx("div", { children: questionText });
+};
+
+var SINGLE_ANSWER = 1;
+var TWO_ANSWERS = 2;
+var calculateGridClassOnAuto = function (itemCount) {
+    switch (itemCount) {
+        case SINGLE_ANSWER:
+            return "";
+        case TWO_ANSWERS:
+            return "grid-cols-2";
+        default:
+            return "";
+    }
+};
+var AnswersWrapper = function (_a) {
+    var answers = _a.answers, _b = _a.type, type = _b === void 0 ? "auto" : _b;
+    if (!answers) {
+        throw Error("Answers must exists, and ");
+    }
+    var wrapperClass = "";
+    switch (type) {
+        case "auto":
+            wrapperClass = calculateGridClassOnAuto(answers === null || answers === void 0 ? void 0 : answers.length);
+            break;
+        case "horizontal":
+            wrapperClass = "grid-flow-col";
+            break;
+        case "vertical":
+            wrapperClass = "grid-flow-row";
+            break;
+        default:
+            wrapperClass = type;
+            break;
+    }
+    return (jsxRuntime.jsx("div", __assign({ className: "grid ".concat(wrapperClass) }, { children: answers === null || answers === void 0 ? void 0 : answers.map(function (answer) { return (jsxRuntime.jsx(AnswerText, { answer: answer }, answer)); }) })));
+};
+
+var Question = function (_a) {
+    var answers = _a.answers, questionText = _a.questionText;
+    return (jsxRuntime.jsxs("div", { children: [jsxRuntime.jsx(QuestionText, { questionText: questionText }), jsxRuntime.jsx(AnswersWrapper, { answers: answers })] }));
+};
+
+var QuestionView = function (_a) {
+    var answers = _a.answers, questionText = _a.questionText;
+    return (jsxRuntime.jsx(Question, { answers: answers, questionText: questionText }));
+};
+
+exports.AnswerText = AnswerText;
+exports.AnswersWrapper = AnswersWrapper;
+exports.Question = Question;
+exports.QuestionText = QuestionText;
+exports.QuestionView = QuestionView;
 //# sourceMappingURL=index.js.map

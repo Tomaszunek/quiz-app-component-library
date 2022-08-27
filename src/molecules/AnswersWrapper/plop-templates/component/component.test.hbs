@@ -1,0 +1,13 @@
+import { render, screen } from '@testing-library/react'
+import React from 'react'
+
+import { {{pascalCase compName}} } from './{{pascalCase compName}}'
+
+describe('{{pascalCase compName}} - suite', () => {
+  it('to display {{pascalCase compName}} in proper way', () => {
+    expect.hasAssertions()
+    render(<{{pascalCase compName}} />)
+    const text = screen.getByText('abc')
+    expect(text).toBeInTheDocument()
+  })
+})
