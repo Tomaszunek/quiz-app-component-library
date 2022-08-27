@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript", 
+    "airbnb/hooks",
+    "eslint:recommended", 
+    "plugin:react/all", 
+    "plugin:prettier/recommended", 
+    "plugin:@typescript-eslint/all", 
+    "plugin:storybook/recommended", 
+    "plugin:jest/recommended", 
+    "react-app", 
+    "react-app/jest"
+  ],
+  "plugins": ["react", "jest", "import", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "quotes" : "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/no-type-alias": "off",
+    "@typescript-eslint/prefer-readonly-parameter-types": "off"
+  },
+  "overrides": [{
+    "files": ["**/*.stories.tsx"],
+    "rules": {
+      "react/function-component-definition": "off"
+    }
+  }]
+}

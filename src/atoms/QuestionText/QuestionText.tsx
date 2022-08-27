@@ -1,5 +1,5 @@
 export type QuestionTextProps = { questionText: string };
 
-export const QuestionText = ({ questionText }: QuestionTextProps) => {
+export function QuestionText({ questionText }: QuestionTextProps): JSX.Element {
   return <div>{questionText}</div>;
-};
+}

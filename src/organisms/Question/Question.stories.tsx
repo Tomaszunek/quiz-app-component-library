@@ -1,15 +1,16 @@
-import { Story } from '@storybook/react'
-import { Meta } from '@storybook/react/types-6-0'
-import React from 'react'
+import type { Story } from "@storybook/react";
+import type { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import { Question, QuestionProps } from './Question'
+import type { QuestionProps } from "./Question";
+import { Question } from "./Question";
 
 export default {
   component: Question,
-  title: 'Organisms/AnswersWrapper',
-} as Meta
+  title: "Organisms/AnswersWrapper",
+} as Meta;
 
-const Template: Story<QuestionProps> = (args) => <Question {...args} />
+const Template: Story<QuestionProps> = (args) => <Question {...args} />;
 
-export const Simple = Template.bind({})
-Simple.args = { answers: ['question1', 'question2'] }
+export const Simple = Template.bind({});
+Simple.args = { answers: ["question1", "question2"] };

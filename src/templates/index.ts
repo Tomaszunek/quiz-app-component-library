@@ -1,2 +1,2 @@
 /* PLOP_INJECT_EXPORT */
-export { QuestionView } from './QuestionView'
+export { QuestionView } from "./QuestionView";

@@ -5,6 +5,9 @@ export type QuestionViewProps = {
   questionText: string;
 };
 
-export const QuestionView = ({ answers, questionText }: QuestionViewProps) => (
-  <Question answers={answers} questionText={questionText} />
-);
+export function QuestionView({
+  answers,
+  questionText,
+}: QuestionViewProps): JSX.Element {
+  return <Question answers={answers} questionText={questionText} />;
+}

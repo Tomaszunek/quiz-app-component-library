@@ -6,11 +6,14 @@ export type QuestionProps = {
   questionText: string;
 };
 
-export const Question = ({ answers, questionText }: QuestionProps) => {
+export function Question({
+  answers,
+  questionText,
+}: QuestionProps): JSX.Element {
   return (
     <div>
       <QuestionText questionText={questionText} />
       <AnswersWrapper answers={answers} />
     </div>
   );
-};
+}

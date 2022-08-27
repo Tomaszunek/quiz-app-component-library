@@ -1,15 +1,16 @@
-import { Story } from '@storybook/react'
-import { Meta } from '@storybook/react/types-6-0'
-import React from 'react'
+import type { Story } from "@storybook/react";
+import type { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import { AnswerText, AnswerTextProps } from './AnswerText'
+import type { AnswerTextProps } from "./AnswerText";
+import { AnswerText } from "./AnswerText";
 
 export default {
   component: AnswerText,
-  title: 'Atoms/AnswerText',
-} as Meta
+  title: "Atoms/AnswerText",
+} as Meta;
 
-const Template: Story<AnswerTextProps> = (args) => <AnswerText {...args} />
+const Template: Story<AnswerTextProps> = (args) => <AnswerText {...args} />;
 
-export const Simple = Template.bind({})
-Simple.args = { answer: 'answer' }
+export const Simple = Template.bind({});
+Simple.args = { answer: "answer" };
