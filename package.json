@@ -9,7 +9,7 @@
     "plop": "plop --plotfile plotfile.ts",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "lint:fix": "npm run lint --fix",
-    "format": "prettier --write"
+    "format": "prettier --write src/**/*.ts{,x}"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

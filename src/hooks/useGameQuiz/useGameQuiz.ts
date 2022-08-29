@@ -20,8 +20,6 @@ export const useGameQuiz = ({
   debug = false,
   quizSet,
 }: UseGameQuizProps): UseGameQuizResult => {
-  if (debug) {
-  }
   const { questions } = quizSet;
   const { answers, id, questionText } = questions[0];
 
