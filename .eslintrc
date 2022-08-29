@@ -30,8 +30,9 @@
   "rules": {
     "import/prefer-default-export": "off",
     "quotes" : "off",
-    "react/react-in-jsx-scope": "off",
+    "react/button-has-type": "off",
     "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
     "@typescript-eslint/quotes": "off",
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
@@ -41,7 +42,8 @@
   "overrides": [{
     "files": ["**/*.stories.tsx"],
     "rules": {
-      "react/function-component-definition": "off"
+      "react/function-component-definition": "off",
+      "react/no-multi-comp": "off"
     }
   }]
 }

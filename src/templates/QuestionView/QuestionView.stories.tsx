@@ -1,6 +1,5 @@
 import type { Story } from "@storybook/react";
 import type { Meta } from "@storybook/react/types-6-0";
-import React from "react";
 
 import type { QuestionViewProps } from "./QuestionView";
 import { QuestionView } from "./QuestionView";
@@ -14,6 +13,15 @@ const Template: Story<QuestionViewProps> = (args) => <QuestionView {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {
-  answers: ["question1", "question2"],
+  answers: [
+    {
+      answerText: "question1",
+      nextQuestionId: "next-1",
+    },
+    {
+      answerText: "question2",
+      nextQuestionId: "next-2",
+    },
+  ],
   questionText: "What is Your question",
 };

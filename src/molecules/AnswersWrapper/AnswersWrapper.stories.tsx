@@ -15,4 +15,23 @@ const Template: Story<AnswersWrapperProps> = (args) => (
 );
 
 export const Simple = Template.bind({});
-Simple.args = { answers: ["question1", "question2", "question3", "question4"] };
+Simple.args = {
+  answers: [
+    {
+      answerText: "question1",
+      nextQuestionId: "n-1",
+    },
+    {
+      answerText: "question2",
+      nextQuestionId: "n-2",
+    },
+    {
+      answerText: "question3",
+      nextQuestionId: "n-3",
+    },
+    {
+      answerText: "question4",
+      nextQuestionId: "n-4",
+    },
+  ],
+};

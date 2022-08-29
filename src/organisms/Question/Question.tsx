@@ -1,8 +1,9 @@
 import { QuestionText } from "../../atoms";
 import { AnswersWrapper } from "../../molecules";
+import type { AnswerType } from "../../types/Answer";
 
 export type QuestionProps = {
-  answers: string[];
+  answers: AnswerType[];
   questionText: string;
 };
 

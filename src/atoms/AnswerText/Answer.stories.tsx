@@ -13,4 +13,4 @@ export default {
 const Template: Story<AnswerTextProps> = (args) => <AnswerText {...args} />;
 
 export const Simple = Template.bind({});
-Simple.args = { answer: "answer" };
+Simple.args = { children: "answer" };

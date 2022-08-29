@@ -1,7 +1,8 @@
 import { Question } from "../../organisms";
+import type { AnswerType } from "../../types/Answer";
 
 export type QuestionViewProps = {
-  answers: string[];
+  answers: AnswerType[];
   questionText: string;
 };
 
