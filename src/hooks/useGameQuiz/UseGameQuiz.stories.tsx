@@ -5,11 +5,46 @@ import { QuestionView } from "../../templates";
 import type { UseGameQuizProps } from "./useGameQuiz";
 import { useGameQuiz } from "./useGameQuiz";
 
-const GAME_QUIZ_PROPS: UseGameQuizProps = {};
+const GAME_QUIZ_PROPS: UseGameQuizProps = {
+  quizSet: {
+    questions: [
+      {
+        answers: [
+          {
+            answerText: "que-1",
+            nextQuestionId: "n-1",
+          },
+          {
+            answerText: "que-2",
+            nextQuestionId: "n-2",
+          },
+          {
+            answerText: "que-3",
+            nextQuestionId: "n-3",
+          },
+          {
+            answerText: "que-4",
+            nextQuestionId: "n-4",
+          },
+          {
+            answerText: "que-5",
+            nextQuestionId: "n-5",
+          },
+          {
+            answerText: "que-6",
+            nextQuestionId: "n-6",
+          },
+        ],
+        id: "question1",
+        questionText: "question1",
+      },
+    ],
+  },
+};
 
 const UseGameQuizExample = (gameQuizProps: UseGameQuizProps): JSX.Element => {
-  const { currentQuestion } = useGameQuiz(gameQuizProps);
-  return <QuestionView answers={[]} questionText={currentQuestion} />;
+  const { answers, questionText } = useGameQuiz(gameQuizProps);
+  return <QuestionView answers={answers} questionText={questionText} />;
 };
 
 export default {
