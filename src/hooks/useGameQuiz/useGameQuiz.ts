@@ -1,4 +1,6 @@
+import { useState } from "react";
 import type { AnswerType } from "../../types/Answer";
+import type { QuestionType } from "../../types/Question";
 import type { QuizSetType } from "../../types/QuizSet";
 import type {
   QuestionIdType,
@@ -7,25 +9,42 @@ import type {
 
 export type UseGameQuizProps = {
   debug?: boolean;
+  firstQuestionId: QuestionIdType;
   quizSet: QuizSetType;
 };
 
 export type UseGameQuizResult = {
   questionText: QuestionTextType;
   answers: AnswerType[];
-  id: QuestionIdType;
+  currentQuestionId: QuestionIdType;
+  handleChangeQuestionId: (questionIdType: QuestionIdType) => void;
 };
 
 export const useGameQuiz = ({
   debug = false,
+  firstQuestionId,
   quizSet,
 }: UseGameQuizProps): UseGameQuizResult => {
   const { questions } = quizSet;
-  const { answers, id, questionText } = questions[0];
+  const [currentQuestionId, setCurrentQuestionId] =
+    useState<QuestionIdType>(firstQuestionId);
+  const [currentQuestion, setCurrentQuestion] = useState<QuestionType>(
+    questions.find(({ id }) => id === currentQuestionId) ?? questions[0]
+  );
 
+  const handleChangeQuestionId = (questionIdType: QuestionIdType): void => {
+    const newQuestion = questions.find(({ id }) => id === questionIdType);
+    if (newQuestion) {
+      setCurrentQuestionId(questionIdType);
+      setCurrentQuestion(newQuestion);
+    }
+  };
+
+  const { answers, id, questionText } = currentQuestion;
   return {
     answers,
-    id,
+    currentQuestionId: id,
+    handleChangeQuestionId,
     questionText,
   };
 };

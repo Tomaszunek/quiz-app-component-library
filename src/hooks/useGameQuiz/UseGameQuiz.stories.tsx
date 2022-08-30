@@ -38,13 +38,81 @@ const GAME_QUIZ_PROPS: UseGameQuizProps = {
         id: "question1",
         questionText: "question1",
       },
+      {
+        answers: [
+          {
+            answerText: "ans-1-1",
+            nextQuestionId: "n-1-1",
+          },
+        ],
+        id: "n-1",
+        questionText: "question2",
+      },
+      {
+        answers: [
+          {
+            answerText: "ans-2-1",
+            nextQuestionId: "n-2-1",
+          },
+        ],
+        id: "n-2",
+        questionText: "question3",
+      },
+      {
+        answers: [
+          {
+            answerText: "ans-3-1",
+            nextQuestionId: "n-3-1",
+          },
+        ],
+        id: "n-3",
+        questionText: "question4",
+      },
+      {
+        answers: [
+          {
+            answerText: "ans-1-1-1",
+            nextQuestionId: "n-1-1-1",
+          },
+        ],
+        id: "n-1-1",
+        questionText: "question5",
+      },
+      {
+        answers: [
+          {
+            answerText: "ans-2-1-1",
+            nextQuestionId: "n-2-1-1",
+          },
+        ],
+        id: "n-2-1",
+        questionText: "question6",
+      },
+      {
+        answers: [
+          {
+            answerText: "ans-3-1-1",
+            nextQuestionId: "n-3-1-1",
+          },
+        ],
+        id: "n-3-1",
+        questionText: "question7",
+      },
     ],
   },
+  firstQuestionId: "question1",
 };
 
 const UseGameQuizExample = (gameQuizProps: UseGameQuizProps): JSX.Element => {
-  const { answers, questionText } = useGameQuiz(gameQuizProps);
-  return <QuestionView answers={answers} questionText={questionText} />;
+  const question = useGameQuiz(gameQuizProps);
+  const { answers, handleChangeQuestionId, questionText } = question;
+  return (
+    <QuestionView
+      answers={answers}
+      onClickAnswerHandler={handleChangeQuestionId}
+      questionText={questionText}
+    />
+  );
 };
 
 export default {

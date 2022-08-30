@@ -1,9 +1,12 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import styled from "styled-components";
+import type { QuestionIdType } from "../../types/TypesComponents";
 
 export type AnswerTextProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode | ReactNode[];
   type?: NonNullable<ButtonHTMLAttributes<HTMLButtonElement>["type"]>;
+  onClickAnswerHandler: (questionIdType: QuestionIdType) => void;
+  nextQuestionId: QuestionIdType;
 };
 
 const AnswerTextButton = styled.button`
@@ -34,6 +37,17 @@ const AnswerTextButton = styled.button`
 export function AnswerText({
   children,
   type = "button",
+  onClickAnswerHandler,
+  nextQuestionId,
 }: AnswerTextProps): JSX.Element {
-  return <AnswerTextButton type={type}>{children}</AnswerTextButton>;
+  return (
+    <AnswerTextButton
+      onClick={(): void => {
+        onClickAnswerHandler(nextQuestionId);
+      }}
+      type={type}
+    >
+      {children}
+    </AnswerTextButton>
+  );
 }
