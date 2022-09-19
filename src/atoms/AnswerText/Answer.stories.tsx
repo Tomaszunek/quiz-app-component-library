@@ -1,6 +1,5 @@
 import type { Story } from "@storybook/react";
 import type { Meta } from "@storybook/react/types-6-0";
-import React from "react";
 
 import type { AnswerTextProps } from "./AnswerText";
 import { AnswerText } from "./AnswerText";

@@ -1,13 +1,13 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
+import type { AnswerTypeWithText } from "../../types/Answer";
 import type { QuestionIdType } from "../../types/TypesComponents";
 
-export type AnswerTextProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  children: ReactNode | ReactNode[];
-  type?: NonNullable<ButtonHTMLAttributes<HTMLButtonElement>["type"]>;
-  onClickAnswerHandler: (questionIdType: QuestionIdType) => void;
-  nextQuestionId: QuestionIdType;
-};
+export type AnswerTextProps = AnswerTypeWithText &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    type?: NonNullable<ButtonHTMLAttributes<HTMLButtonElement>["type"]>;
+    onClickAnswerHandler: (questionIdType: QuestionIdType) => void;
+  };
 
 const AnswerTextButton = styled.button`
   width: 100%;
@@ -35,10 +35,10 @@ const AnswerTextButton = styled.button`
 `;
 
 export function AnswerText({
-  children,
   type = "button",
   onClickAnswerHandler,
   nextQuestionId,
+  answerText,
 }: AnswerTextProps): JSX.Element {
   return (
     <AnswerTextButton
@@ -47,7 +47,7 @@ export function AnswerText({
       }}
       type={type}
     >
-      {children}
+      {answerText}
     </AnswerTextButton>
   );
 }

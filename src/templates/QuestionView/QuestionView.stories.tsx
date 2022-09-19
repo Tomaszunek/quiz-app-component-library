@@ -15,12 +15,8 @@ export const Simple = Template.bind({});
 Simple.args = {
   answers: [
     {
-      answerText: "question1",
-      nextQuestionId: "next-1",
-    },
-    {
-      answerText: "question2",
-      nextQuestionId: "next-2",
+      answerText: "answer-1",
+      nextQuestionId: "n-1",
     },
   ],
   questionText: "What is Your question",

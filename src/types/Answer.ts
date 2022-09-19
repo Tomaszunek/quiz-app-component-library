@@ -1,6 +1,9 @@
 import type { AnswerTextType, QuestionIdType } from "./TypesComponents";
 
-export type AnswerType = {
-  answerText: AnswerTextType;
+type AnswerType = {
   nextQuestionId: QuestionIdType;
+};
+
+export type AnswerTypeWithText = AnswerType & {
+  answerText: AnswerTextType;
 };

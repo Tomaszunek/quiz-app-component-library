@@ -1,11 +1,14 @@
 import { useState } from "react";
-import type { AnswerType } from "../../types/Answer";
-import type { QuestionType } from "../../types/Question";
-import type { QuizSetType } from "../../types/QuizSet";
+import type { QuestionGridAnswerType } from "../../molecules/AnswersGridWrapper/AnswersGridWrapper";
 import type {
-  QuestionIdType,
-  QuestionTextType,
-} from "../../types/TypesComponents";
+  AllAnswerBodies,
+  AllAnswerTypes,
+  AllQuestionBodies,
+  AllQuestionTypes,
+  QuestionType,
+} from "../../types/Question";
+import type { QuizSetType } from "../../types/QuizSet";
+import type { QuestionIdType } from "../../types/TypesComponents";
 
 export type UseGameQuizProps = {
   debug?: boolean;
@@ -14,10 +17,13 @@ export type UseGameQuizProps = {
 };
 
 export type UseGameQuizResult = {
-  questionText: QuestionTextType;
-  answers: AnswerType[];
+  answers: AllAnswerBodies;
+  answerType: AllAnswerTypes;
   currentQuestionId: QuestionIdType;
   handleChangeQuestionId: (questionIdType: QuestionIdType) => void;
+  gridType?: QuestionGridAnswerType;
+  question: AllQuestionBodies;
+  questionType: AllQuestionTypes;
 };
 
 export const useGameQuiz = ({
@@ -40,11 +46,21 @@ export const useGameQuiz = ({
     }
   };
 
-  const { answers, id, questionText } = currentQuestion;
-  return {
+  const {
     answers,
+    id,
+    questionType,
+    gridType,
+    questionAnswerType,
+    questionBody,
+  } = currentQuestion;
+  return {
     currentQuestionId: id,
     handleChangeQuestionId,
-    questionText,
+    questionType,
+    gridType,
+    answers,
+    answerType,
+    question,
   };
 };

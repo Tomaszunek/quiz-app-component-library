@@ -1,17 +1,16 @@
 import type { Story } from "@storybook/react";
 import type { Meta } from "@storybook/react/types-6-0";
-import React from "react";
 
-import type { AnswersWrapperProps } from "./AnswersWrapper";
-import { AnswersWrapper } from "./AnswersWrapper";
+import type { AnswersGridWrapperProps } from "./AnswersGridWrapper";
+import { AnswersGridWrapper } from "./AnswersGridWrapper";
 
 export default {
-  component: AnswersWrapper,
-  title: "Molecules/AnswersWrapper",
+  component: AnswersGridWrapper,
+  title: "Molecules/AnswersGridWrapper",
 } as Meta;
 
-const Template: Story<AnswersWrapperProps> = (args) => (
-  <AnswersWrapper {...args} />
+const Template: Story<AnswersGridWrapperProps> = (args) => (
+  <AnswersGridWrapper {...args} />
 );
 
 export const Simple = Template.bind({});
